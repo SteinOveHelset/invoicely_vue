@@ -78,6 +78,7 @@
 
 <script>
 import axios from 'axios'
+import { toast } from 'bulma-toast'
 
 export default {
     name: 'AddClient',
@@ -91,6 +92,15 @@ export default {
             axios
                 .post("/api/v1/clients/", this.client)
                 .then(response => {
+                    toast({
+                        message: 'The client was added',
+                        type: 'is-success',
+                        dismissible: true,
+                        pauseOnHover: true,
+                        duration: 2000,
+                        position: 'bottom-right',
+                    })
+
                     this.$router.push('/dashboard/clients')
                 })
                 .catch(error => {
