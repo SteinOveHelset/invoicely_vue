@@ -22,7 +22,7 @@
                             v-for="invoice in invoices"
                             v-bind:key="invoice.id"
                         >
-                            <td>{{ invoice.id }}</td>
+                            <td>{{ invoice.invoice_number }}</td>
                             <td>{{ invoice.client_name }}</td>
                             <td>{{ invoice.gross_amount }}</td>
                             <td>{{ invoice.is_paid }}</td>
