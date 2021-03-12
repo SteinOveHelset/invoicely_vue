@@ -1,5 +1,13 @@
 <template>
     <div class="page-edit-team">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+                <li><router-link to="/dashboard">Dashboard</router-link></li>
+                <li><router-link to="/dashboard/my-account">My account</router-link></li>
+                <li class="is-active"><router-link to="/dashboard/my-account/edit-team" aria-current="true">Edit team</router-link></li>
+            </ul>
+        </nav>
+
         <div class="columns is-multiline">
             <div class="column is-12">
                 <h1 class="title">Edit team</h1>
@@ -31,6 +39,41 @@
                     <label>Bankaccount</label>
                     <div class="control">
                         <input type="text" class="input" v-model="team.bankaccount">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Email</label>
+                    <div class="control">
+                        <input type="email" class="input" v-model="team.email">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Address</label>
+                    <div class="control">
+                        <input type="text" class="input" v-model="team.address1">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Address two</label>
+                    <div class="control">
+                        <input type="text" class="input" v-model="team.address2">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Zipcode</label>
+                    <div class="control">
+                        <input type="text" class="input" v-model="team.zipcode">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Place</label>
+                    <div class="control">
+                        <input type="text" class="input" v-model="team.place">
                     </div>
                 </div>
 
